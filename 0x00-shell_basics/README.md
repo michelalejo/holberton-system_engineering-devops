@@ -51,3 +51,6 @@ It is important to write source before the script.
 
 17-tree
 *Script that creates the directories welcome/to/holberton*
+
+18-commas
+*Script that make a list of everything(including hidden).listing in alpha ordered and separated them by commas.*
