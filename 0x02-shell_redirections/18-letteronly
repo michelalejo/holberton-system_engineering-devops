@@ -1,2 +1,2 @@
 #!/bin/bash
-echo Hello, World
+cat /etc/ssh/sshd_config | grep '^{A..Z}'
