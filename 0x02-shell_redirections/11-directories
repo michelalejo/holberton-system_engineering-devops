@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -laR | find -type d -not -iname "." | wc -l
