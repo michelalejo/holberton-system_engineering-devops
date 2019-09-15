@@ -22,7 +22,7 @@
 * This script displays the third line of the file iacta*
 
 <b> 7-file </b>
-* This script creates a file named "\*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)" and with the content text "Holberton School"*
+* This script creates a file named "\*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)" and with theq content text "Holberton School"*
 
 <b> 8-cwd_state </b>
 * This script writes into the file ls_cwd_content the result of the command ls -la*
