@@ -5,19 +5,11 @@ b=$"School"
 i=1
 while [ $i -le 20 ]
 do
-    if [ $i = 5 ]
-    then
-	printf "bad luck from China"
-	printf "\n"
-    elif [ $i = 10 ]
-    then
-        printf "bad luck from Japan"
-        printf "\n"
-    elif [ $i = 18 ]
-    then
-        printf "bad luck from Italy"
-        printf "\n"
-    fi
+    case $i in
+	5) printf "bad luck from China\n";;
+	10) printf "bad luck from Japan\n";;
+	18) printf "bad luck from Italy\n";;
+    esac
     printf "%s" $i
     printf "\n"
     i=$(( i+1 ))
