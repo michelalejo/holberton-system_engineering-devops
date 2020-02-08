@@ -1,6 +1,19 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
-for f in *;
-do
-    echo "$f" | cut -d'-' -f2
-done
+f="holbertonschool"
+if [ -e ./$f ];
+then
+    echo "$f file exists"
+	if [ ! -s ./$f ];
+	then
+		printf "holbertonschool file is empty"
+	else
+		printf "holbertonschool file is not empty"
+	fi
+	if [ ! -d ./$f ];
+	then
+		echo "$f is a regular file"
+	fi
+else
+    echo "$f file does not exist"
+fi
