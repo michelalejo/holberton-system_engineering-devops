@@ -6,9 +6,9 @@ then
     echo "$f file exists"
 	if [ ! -s ./$f ];
 	then
-		printf "holbertonschool file is empty"
+	    echo "holbertonschool file is empty"
 	else
-		printf "holbertonschool file is not empty"
+	    echo "holbertonschool file is not empty"
 	fi
 	if [ ! -d ./$f ];
 	then
