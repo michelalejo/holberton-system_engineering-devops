@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+a=$"Holberton"
+b=$"School"
+i=0
+while [ $i -le 9 ]
+do
+    if [ $i = 3 ]
+    then
+	printf "bad luck"
+	printf "\n"
+	i=$(( i+1 ))
+    elif [ $i = 7 ]
+    then
+        printf "good luck"
+        printf "\n"
+	i=$(( i+1 ))
+    else
+	printf "%s " $a
+	printf "%s" $b
+	printf "\n"
+	i=$(( i+1 ))
+    fi
+done
