@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#display username and passworn.
+
+passwd="/etc/passwd"
+while IFS= read -r line
+do
+    echo "$line" | cut -d':' --fields=1,3,6
+done < "$passwd"
