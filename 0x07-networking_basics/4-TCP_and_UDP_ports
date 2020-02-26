@@ -1,1 +1,2 @@
-sudo netstat -pl
+#!/usr/bin/env bash
+netstat -pl
