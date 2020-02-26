@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Change IP
+echo -e "127.0.0.2 localhost\n8.8.8.8 facebook.com" > /etc/hosts
