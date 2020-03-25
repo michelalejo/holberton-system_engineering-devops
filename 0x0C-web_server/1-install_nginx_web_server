@@ -1,8 +1,7 @@
-#! /usr/bin/env bash
-# scrpit task.
-
+#!/usr/bin/env bash
+# Nginx server install.
 apt-get update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
-echo "Holberton School for the win!" > /var/www/html/index.nginx-debian.html
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
 service nginx start
