@@ -26,7 +26,7 @@ CREATE TABLE `nexus6` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `nexus6` (
 
 LOCK TABLES `nexus6` WRITE;
 /*!40000 ALTER TABLE `nexus6` DISABLE KEYS */;
-INSERT INTO `nexus6` VALUES (1,'Michel');
+INSERT INTO `nexus6` VALUES (1,'Leon'),(2,'Leon'),(3,'Leon'),(4,'Leon'),(5,'Leon'),(6,'Leon');
 /*!40000 ALTER TABLE `nexus6` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-23 16:20:55
+-- Dump completed on 2020-04-23 18:39:29
