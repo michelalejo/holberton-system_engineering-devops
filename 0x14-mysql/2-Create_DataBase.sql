@@ -2,4 +2,4 @@
 CREATE DATABASE IF NOT EXISTS tyrell_corp;
 USE tyrell_corp;
 CREATE TABLE nexus6(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20));
-INSERT INTO `nexus6` (`id`,`name`) VALUES (NULL, "Michel");
+INSERT INTO `nexus6` (`id`,`name`) VALUES (NULL, "Leon");
