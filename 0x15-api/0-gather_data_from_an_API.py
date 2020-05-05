@@ -5,10 +5,10 @@ returns information about his/her TODO list progress.
 """
 
 import requests
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    id = sys.argv[1]
+    id = argv[1]
     tmp = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(
         id))
     temp = requests.get(
