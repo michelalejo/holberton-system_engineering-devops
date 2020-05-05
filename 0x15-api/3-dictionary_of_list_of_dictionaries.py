@@ -8,8 +8,7 @@ import requests
 if __name__ == "__main__":
     users = requests.get('https://jsonplaceholder.typicode.com/users')
     user_info = users.json()
-    n_users = len(user_info)
-    n_users = n_users + 1
+    n_users = len(user_info) + 1
     all_data = {}
     for id in range(1, n_users):
         tmp = requests.get(
@@ -36,7 +35,7 @@ if __name__ == "__main__":
                 "username": content.get('username')
                 }
             data_dic.append(data_list)
-        all_data = {id: data_dic}
+        all_data[id] = data_dic
 
     with open('todo_all_employees.json', 'w') as f:
         json.dump(all_data, f)
