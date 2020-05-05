@@ -81,10 +81,10 @@ log_error = /var/log/mysql/error.log
 # note: if you are setting up a replication slave, see README.Debian about
 #       other settings you may need to change.
 server-id		= 1
-log_bin			= /var/log/mysql/mysql-bin.log
+log_bin                 = /var/log/mysql/mysql-bin.log
 expire_logs_days	= 10
 max_binlog_size   = 100M
-#binlog_do_db		= include_database_name
+binlog_do_db		= tyrell_corp
 #binlog_ignore_db	= include_database_name
 #
 # * InnoDB
@@ -102,4 +102,3 @@ max_binlog_size   = 100M
 # ssl-ca=/etc/mysql/cacert.pem
 # ssl-cert=/etc/mysql/server-cert.pem
 # ssl-key=/etc/mysql/server-key.pem
-binlog_do_db            = tyrell_corp
