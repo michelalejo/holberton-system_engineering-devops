@@ -8,21 +8,26 @@ from sys import argv
 if __name__ == "__main__":
     id = argv[1]
     tmp = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(
-        id)).json()
+        id))
     temp = requests.get(
-        'https://jsonplaceholder.typicode.com/users/{}/todos'.format(
-            id)).json()
+        'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id))
 
-    name = tmp.get('username')
-    info = []
-    for tasks in temp:
-        data = {}
-        data['USER_ID'] = str(tasks.get('userId'))
-        data['USERNAME'] = str(name)
-        data['TASK_COMPLETED_STATUS'] = str(tasks.get('completed'))
-        data['TASK_TITLE'] = str(tasks.get('title'))
-        info.append(data)
-    header = ['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE']
-    with open('{}.csv'.format(id), 'w') as fcsv:
-        f_csv = csv.DictWriter(fcsv, fieldnames=header, quoting=csv.QUOTE_ALL)
-        f_csv.writerows(info)
+    content = tmp.json()
+    info = temp.json()
+    name = content.get('name')
+    user_name = content.get('username')
+    tasks = len(info)
+    count = 0
+    for comp in info:
+        finished = comp.get('completed')
+        if finished:
+            count += 1
+    with open('{}.csv'.format(id), 'w') as f:
+        fields = csv.writer(f, delimiter=',', quotechar='"',
+                            quoting=csv.QUOTE_ALL)
+        for task in info:
+            uid = task.get('userId')
+            complet = task.get('completed')
+            title = task.get('title')
+            f_csv = [uid, user_name, complet, title]
+            fields.writerow(f_csv)
