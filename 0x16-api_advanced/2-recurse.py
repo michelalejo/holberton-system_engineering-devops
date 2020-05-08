@@ -16,10 +16,10 @@ def recurse(subreddit, hot_list=[], after=""):
     data = requests.get(info, headers=headers,
                         allow_redirects=False)
     if str(data) == "<Response [200]>":
-        data_json = data.json()
-        hot_posts_json = data_json.get("data").get("children")
+        dat = data.json()
+        hot_posts_json = dat.get("data").get("children")
         for post in hot_posts_json:
             hot_list.append(post.get("data").get("title"))
-        return hot_list + recurse(subreddit, [], data_json.get("data").get("after"))
+        return hot_list + recurse(subreddit, [], dat.get("data").get("after"))
     else:
         return None
