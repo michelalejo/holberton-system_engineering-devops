@@ -8,3 +8,4 @@ service { 'nginx':
     ensure    => running,
     subscribe => File['/etc/default/nginx']
 }
+#/etc/default/nginx -- ULIMIT="-n 15" to ULIMIT="-n 4096"
